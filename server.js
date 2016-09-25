@@ -9,18 +9,84 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/articleone', function(req,res)
+var articles = {
+    'articleone': {
+        title: 'Article One| SDASH',
+        heading : 'Article 1',
+        date: '15 Jan',
+    content: `<p>
+                    This is the content for atr 1. This is the content for atr 1.This is the content for atr 1.This is the content for atr 1.            This is the content for atr 1.            This is the content for atr 1.        This is the content for atr 1.            This is the content for atr 1.            This is the content for atr 1.
+                </p>
+                `, 
+    },
+    'articletwo': {
+        title: 'Article Two| SDASH',
+        heading : 'Article w',
+        date: '15 Jan',
+    content: `<p>
+                   2
+               
+                </p>`, 
+    },
+     'articlethree': {
+        title: 'Article Three| SDASH',
+        heading : 'Article 3',
+        date: '3123115 Jan',
+    content: `<p>
+                   2213231
+               
+                </p>`, 
+    },
+};
+
+function createrTemplate(data){
+    var title = data.title;
+    var heading = data.heading;
+    var date = data.date;
+    var content = data.content;
+    var htmlTemplate = `<html>
+    <head>
+        <title>
+            ${title}
+        </title>
+         <link href="/ui/style.css" rel="stylesheet" />
+    <meta name="viewport" content = "width=device-width, initial scale = 1" />
+    </head>
+    <body>
+        <div class="edit">
+        
+            <div>
+            <a href='/'>Home</a>
+            </div>
+            <hr/>
+            <h3>
+                ${heading}
+            </h3>
+        
+            <div>
+                ${date}
+            </div>
+                ${content}
+            <div>
+                <p>
+                      Article 2   
+                </p>
+            </div>
+        </div>
+            
+    </body>
+</html>
+`;
+return htmlTemplate;
+}
+
+
+app.get('/:articleName', function(req,res)
 {
-  res.sendFile(path.join(__dirname, 'ui', 'articleone.html'));
+    var articleName = re1.params.articleName; 
+  res.send(createTemplate(articles[articelName]));
 });
-app.get('/articletwo', function(req,res)
-{
-    res.sendFile(path.join(__dirname, 'ui', 'articletwo.html'));
-});
-app.get('/articlethree', function(req,res)
-{
-   res.send('Article three requested and will be served here') ;
-});
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
