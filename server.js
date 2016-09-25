@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
 
 app.get('/articleone', function(req,res)
 {
-   res.send('Article one requested and will be served here') ;
+   res.sendFile(path.Join(_dirname,'ui','articleone.html') ;
 });
 app.get('/articletwo', function(req,res)
 {
