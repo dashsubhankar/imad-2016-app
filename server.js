@@ -55,23 +55,19 @@ function createrTemplate(data){
     <body>
         <div class="edit">
         
-            <div>
-            <a href='/'>Home</a>
-            </div>
-            <hr/>
-            <h3>
-                ${heading}
-            </h3>
-        
-            <div>
-                ${date}
-            </div>
-                ${content}
-            <div>
-                <p>
-                      Article 2   
-                </p>
-            </div>
+                <div>
+                    <a href='/'>Home</a>
+                </div>
+                <hr/>
+                <h3>
+                    ${heading}
+                </h3>
+                <div>
+                    ${date}
+                </div>
+                <div>
+                    ${content}
+                </div>
         </div>
             
     </body>
@@ -84,7 +80,7 @@ return htmlTemplate;
 app.get('/:articleName', function(req,res)
 {
     var articleName = re1.params.articleName; 
-  res.send(createTemplate(articles[articelName]));
+  res.send(createTemplate(articles[articlelName]));
 });
 
 app.get('/ui/style.css', function (req, res) {
