@@ -80,7 +80,7 @@ return htmlTemplate;
 app.get('/:articleName', function(req,res)
 {
     var articleName = re1.params.articleName; 
-  res.send(createTemplate(articles['articlelName']));
+  res.send(createTemplate(articles[articlelName]));
 });
 
 app.get('/ui/style.css', function (req, res) {
