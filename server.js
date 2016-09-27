@@ -9,7 +9,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var articles = {
+/*var articles = {
     'articleone': {
         title: 'Article One| SDASH',
         heading : 'Article 1',
@@ -74,13 +74,14 @@ function createrTemplate(data){
 </html>
 `;
 return htmlTemplate;
-}
+}*/
 
 
-app.get('/:articleName', function(req,res)
+app.get('/articleone', function(req,res)
 {
     var articleName = re1.params.articleName; 
-  res.send(createTemplate(articles[articlelName]));
+  //res.send(createTemplate(articles[articlelName]));
+  res.sendFile(path.join(_dirname,'ui','articleone.html'));
 });
 
 app.get('/ui/style.css', function (req, res) {
