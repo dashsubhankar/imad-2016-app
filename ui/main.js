@@ -11,9 +11,12 @@ function moveRight()
     }
     else
     {
-        marginLeft = marginLeft-10;
-        element.style.marginLeft= marginLeft + 'px';
-        img.style.marginLeft = marginLeft + 'px';
+        for(var i =0; i<40;i++)
+        {
+            marginLeft = marginLeft-10;
+            element.style.marginLeft= marginLeft + 'px';
+            img.style.marginLeft = marginLeft + 'px';   
+        }
     }
 }
 element.onclick = function()
