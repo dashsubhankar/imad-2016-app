@@ -10,14 +10,17 @@ function moveRight()
         img.style.marginLeft = marginLeft + 'px';
     }
     else
-    {
-        for(var i =0; i<40;i++)
+    var int = setInterval(moveLeft,100);
+}
+function moveLeft()
+{
+        if(marginLeft>0)
         {
             marginLeft = marginLeft-10;
             element.style.marginLeft= marginLeft + 'px';
-            img.style.marginLeft = marginLeft + 'px';   
+            img.style.marginLeft = marginLeft + 'px';
         }
-    }
+        else moverRight();
 }
 element.onclick = function()
 {
