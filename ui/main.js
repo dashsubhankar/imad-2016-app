@@ -20,7 +20,7 @@ function moveLeft()
             element.style.marginLeft= marginLeft + 'px';
             img.style.marginLeft = marginLeft + 'px';
         }
-        else moverRight();
+        else moveRight();
 }
 element.onclick = function()
 {
