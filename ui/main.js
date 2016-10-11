@@ -1,5 +1,6 @@
 console.log('Loaded!');
 var element  = document.getElementById('maintext');
+var marginLeft=0;
 function moveRight()
 {
     marginLeft=marginLeft+10;
