@@ -1,11 +1,12 @@
 console.log('Loaded!');
 var element  = document.getElementById('maintext');
+function moveRight()
+{
+    marginLeft=marginLeft+10;
+    element.stle.marginLeft=marginLeft + 'px';
+}
 element.onclick = function()
 {
-    var i=0;
-    for(i=0;i<40000;i++)
-    {
-        element.style.marginLeft= i%400 + 'px';
-    }
+    var interval = setInterval(moveRight,100);
     element.innerHTML= 'YOLO SDASH!';
 };
