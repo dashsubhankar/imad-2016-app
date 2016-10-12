@@ -1,7 +1,7 @@
 console.log('Loaded!');
 var element  = document.getElementById('maintext');
 var marginLeft=0;
-function moveRight()
+/*function moveRight()
 {
     if(marginLeft<400)
     {
@@ -32,3 +32,4 @@ img.onclick = function()
 {
     var interval = setInterval(moveRight,100);
 };
+*/
