@@ -1,6 +1,6 @@
 console.log('Loaded!');
-var element  = document.getElementById('maintext');
-var marginLeft=0;
+//var element  = document.getElementById('maintext');
+//var marginLeft=0;
 /*function moveRight()
 {
     if(marginLeft<400)
@@ -37,7 +37,7 @@ var counter=0;
 var button = document.getElementById('counter');
 button.onclick = function()
 {
-    counter+=1;
+    counter=counter+1;
     var span = doucment.getElementById('count');
     span.innerHTML =  counter.toString();
 };
